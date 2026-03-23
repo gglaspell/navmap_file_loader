@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>navmap_file_loader</name>
+  <version>0.0.1</version>
+  <description>
+    EasyNavigation MapsManager plugin that loads a pre-built .navmap file
+    from an absolute path on disk and publishes it as a NavMap message with
+    plain depth=1 QoS. Designed to bridge offline bag_to_navmap pipeline
+    output into EasyNavigation without requiring ament_index resolution.
+  </description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>pluginlib</depend>
+  <depend>rclcpp</depend>
+  <depend>easynav_core</depend>
+  <depend>navmap_core</depend>
+  <depend>navmap_ros</depend>
+  <depend>navmap_ros_interfaces</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+

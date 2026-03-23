@@ -1,0 +1,14 @@
+<library path="navmap_file_loader">
+  <class
+    type="easynav::NavmapFileLoader"
+    base_class_type="easynav::MapsManagerBase">
+    <description>
+      Loads a pre-built .navmap file from an absolute path on disk and
+      publishes it as a NavMap message with plain depth=1 QoS, matching
+      the NavMapMapsManager topic convention. Intended for offline-generated
+      maps (e.g. from bag_to_navmap) where ament_index resolution is not
+      available.
+    </description>
+  </class>
+</library>
+
