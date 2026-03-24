@@ -47,6 +47,7 @@ target_link_libraries(maps_manager_node PRIVATE
   rclcpp::rclcpp
   rclcpp_lifecycle::rclcpp_lifecycle
   ${lifecycle_msgs_TARGETS}
+  easynav_common::easynav_common
   easynav_core::easynav_core
   easynav_maps_manager::easynav_maps_manager
 )
