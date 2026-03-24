@@ -9,7 +9,7 @@
     output into EasyNavigation without requiring ament_index resolution.
   </description>
 
-  <maintainer email="you@example.com">Your Name</maintainer>
+  <maintainer email="your.real@email.com">Your Real Name</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -25,4 +25,3 @@
     <build_type>ament_cmake</build_type>
   </export>
 </package>
-

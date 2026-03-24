@@ -15,11 +15,8 @@ void NavmapFileLoader::on_initialize()
   auto node = get_node();
   const auto & plugin_name = get_plugin_name();
 
-  node->declare_parameter<std::string>(plugin_name + ".map_file", "");
-  node->get_parameter(plugin_name + ".map_file", map_file_);
-
-  node->declare_parameter<std::string>(plugin_name + ".frame_id", frame_id_);
-  node->get_parameter(plugin_name + ".frame_id", frame_id_);
+  map_file_ = node->declare_parameter<std::string>(plugin_name + ".map_file", "");
+  frame_id_ = node->declare_parameter<std::string>(plugin_name + ".frame_id", frame_id_);
 
   navmap_pub_ = node->create_publisher<navmap_ros_interfaces::msg::NavMap>(
     plugin_name + "/map",

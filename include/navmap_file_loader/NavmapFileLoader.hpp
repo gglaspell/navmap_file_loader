@@ -4,13 +4,14 @@
 #include <string>
 
 #include "easynav_core/MapsManagerBase.hpp"
+#include "navmap_file_loader/visibility_control.hpp"
 #include "navmap_ros_interfaces/msg/nav_map.hpp"
 #include "rclcpp/publisher.hpp"
 
 namespace easynav
 {
 
-class NavmapFileLoader : public MapsManagerBase
+class NAVMAP_FILE_LOADER_PUBLIC NavmapFileLoader : public MapsManagerBase
 {
 public:
   void on_initialize() override;

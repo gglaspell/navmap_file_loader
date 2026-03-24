@@ -1,5 +1,6 @@
 <library path="navmap_file_loader">
   <class
+    name="navmap_file_loader/NavmapFileLoader"
     type="easynav::NavmapFileLoader"
     base_class_type="easynav::MapsManagerBase">
     <description>
@@ -11,4 +12,3 @@
     </description>
   </class>
 </library>
-
