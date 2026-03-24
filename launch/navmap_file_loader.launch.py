@@ -11,14 +11,14 @@ def generate_launch_description():
         "navmap_file_loader.yaml",
     )
 
-    system_node = Node(
-        package="easynav_system",
-        executable="system_main",
-        name="easynav_system",
+    maps_manager_node = Node(
+        package="navmap_file_loader",
+        executable="maps_manager_node",
+        name="maps_manager_node",
         output="screen",
         parameters=[config_file],
     )
 
     return LaunchDescription([
-        system_node,
+        maps_manager_node,
     ])
