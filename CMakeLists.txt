@@ -23,13 +23,13 @@ target_include_directories(${PROJECT_NAME}
     $<INSTALL_INTERFACE:include>
 )
 
-ament_target_dependencies(${PROJECT_NAME}
-  pluginlib
-  rclcpp
-  easynav_core
-  navmap_core
-  navmap_ros
-  navmap_ros_interfaces
+target_link_libraries(${PROJECT_NAME} PUBLIC
+  pluginlib::pluginlib
+  rclcpp::rclcpp
+  ${easynav_core_TARGETS}
+  ${navmap_core_TARGETS}
+  ${navmap_ros_TARGETS}
+  ${navmap_ros_interfaces_TARGETS}
 )
 
 pluginlib_export_plugin_description_file(easynav_core navmap_file_loader_plugins.xml)
@@ -68,3 +68,4 @@ ament_export_dependencies(
 )
 
 ament_package()
+
