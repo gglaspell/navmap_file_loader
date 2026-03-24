@@ -26,9 +26,9 @@ target_include_directories(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} PUBLIC
   pluginlib::pluginlib
   rclcpp::rclcpp
-  ${easynav_core_TARGETS}
-  ${navmap_core_TARGETS}
-  ${navmap_ros_TARGETS}
+  easynav_core::easynav_core
+  navmap_core::navmap_core
+  navmap_ros::navmap_ros
   ${navmap_ros_interfaces_TARGETS}
 )
 
@@ -68,4 +68,3 @@ ament_export_dependencies(
 )
 
 ament_package()
-
