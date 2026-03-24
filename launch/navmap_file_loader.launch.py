@@ -13,7 +13,7 @@ def generate_launch_description():
     )
 
     maps_manager_node = Node(
-        package="easynav_maps_manager",
+        package="easynav_system",        # <-- changed from easynav_maps_manager
         executable="maps_manager_node",
         name="maps_manager_node",
         output="screen",
@@ -27,4 +27,3 @@ def generate_launch_description():
     return LaunchDescription([
         maps_manager_node,
     ])
-
