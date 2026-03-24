@@ -4,6 +4,6 @@ maps_manager_node:
     map_types: ["navmap"]
 
     navmap:
-      plugin: "easynav::NavmapFileLoader"
+      plugin: "navmap_file_loader/NavmapFileLoader"
       map_file: "/Rolling/navmap/tb3.navmap"
       frame_id: "map"
