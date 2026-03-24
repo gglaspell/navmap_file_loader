@@ -9,7 +9,6 @@ Everything below assumes your ROS 2 workspace is at `~/ros2_ws` and your `.navma
 **Note:** 
 One line change near the bottom of /Rolling/ros2_ws/src/EasyNavigation/easynav_maps_manager/CMakeLists.txt:
 
-text
 ### WRONG — no Config.cmake is generated
 ament_export_targets(export_${PROJECT_NAME})
 
