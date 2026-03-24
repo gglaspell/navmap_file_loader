@@ -19,16 +19,13 @@ public:
 private:
   std::string map_file_;
   std::string frame_id_{"map"};
-  bool loaded_{false};    // file successfully read into cached_msg_
-  bool published_{false}; // at least one subscriber has received it
+  bool loaded_{false};
+  bool had_subscribers_{false};
 
   navmap_ros_interfaces::msg::NavMap cached_msg_;
-
-  // rclcpp::Publisher — matches the return type of get_node()->create_publisher()
   rclcpp::Publisher<navmap_ros_interfaces::msg::NavMap>::SharedPtr navmap_pub_;
 };
 
 }  // namespace easynav
 
 #endif  // NAVMAP_FILE_LOADER__NAVMAP_FILE_LOADER_HPP_
-
