@@ -1,10 +1,9 @@
-cat > ~/Docker/Rolling/ros2_ws/src/navmap_file_loader/src/maps_manager_main.cpp << 'EOF'
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_lifecycle/lifecycle_node.hpp"
 #include "lifecycle_msgs/msg/transition.hpp"
 #include "lifecycle_msgs/msg/state.hpp"
 #include "easynav_maps_manager/MapsManagerNode.hpp"
-#include "easynav_core/NavState.hpp"
+#include "easynav_common/types/NavState.hpp"
 
 int main(int argc, char ** argv)
 {
@@ -44,5 +43,3 @@ int main(int argc, char ** argv)
   rclcpp::shutdown();
   return 0;
 }
-EOF
-
